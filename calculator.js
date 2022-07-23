@@ -89,6 +89,7 @@ const operationBtn = document.querySelectorAll('[data-operation]')
 const equalBtn = document.querySelector('[data-equal]')
 const deleteBtn = document.querySelector('[data-delete]')
 const acBtn = document.querySelector('[data-ac]')
+const percentBtn = document.querySelector('[data-percent]')
 const firstNumberTextElement = document.querySelector('[data-firstnum]')
 const secondNumberTextElement = document.querySelector('[data-secondnum]')
 
@@ -125,3 +126,4 @@ deleteBtn.addEventListener('click', (button) => {
     calculator.delete()
     calculator.updateDisplay()
 })
+
