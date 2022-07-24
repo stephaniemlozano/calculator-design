@@ -1,3 +1,13 @@
+const numberBtn = document.querySelectorAll('[data-number]')
+const operationBtn = document.querySelectorAll('[data-operation]')
+const equalBtn = document.querySelector('[data-equal]')
+const deleteBtn = document.querySelector('[data-delete]')
+const acBtn = document.querySelector('[data-ac]')
+const percentBtn = document.querySelector('[data-percent]')
+const firstNumberTextElement = document.querySelector('[data-firstnum]')
+const secondNumberTextElement = document.querySelector('[data-secondnum]')
+
+
 class Calculator {
   constructor(firstNumberTextElement, secondNumberTextElement) {
     this.firstNumberTextElement = firstNumberTextElement
@@ -83,15 +93,6 @@ class Calculator {
     }
   }
 }
-
-const numberBtn = document.querySelectorAll('[data-number]')
-const operationBtn = document.querySelectorAll('[data-operation]')
-const equalBtn = document.querySelector('[data-equal]')
-const deleteBtn = document.querySelector('[data-delete]')
-const acBtn = document.querySelector('[data-ac]')
-const percentBtn = document.querySelector('[data-percent]')
-const firstNumberTextElement = document.querySelector('[data-firstnum]')
-const secondNumberTextElement = document.querySelector('[data-secondnum]')
 
 const calculator = new Calculator(
   firstNumberTextElement,
