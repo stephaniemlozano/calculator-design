@@ -51,11 +51,11 @@ body {
     background-color: #3bcfd48a;
 }
 
-#btn-ac {
+.btn-ac {
     grid-column: span 2;
 }
 
-#btn-equal {
+.btn-equal {
     grid-column: span 2;
 }
 

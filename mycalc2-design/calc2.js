@@ -1,26 +1,43 @@
-const outputScreen = document.querySelector('.output')
-const firstNumberEntered = document.querySelector('.first-num')
-const secondNumberEntered = document.querySelector('.second-num')
-const operation = document.querySelectorAll('.btn-operation')
+const outputScreen = document.querySelector('.output').innerHTML
+// const firstNumberEntered = document.querySelector('.first-num')
+// const secondNumberEntered = document.querySelector('.second-num')
+// const operation = document.querySelectorAll('.btn-operation')
+// const equalsButton = document.querySelector('.btn-equal')
+// const acButton = document.querySelector('.btn-ac')
+// const delButton = document.querySelector('.btn-del')
 
-function buttonAction() {
-   document.querySelector('btn-action')
+function buttonsAction(elementLocation) {
+   document.querySelector(elementLocation)
 }
 
-function buttonNumberKey() {
-   document.querySelector('number-key')
+buttonsAction('.btn-ac')
+buttonsAction('.btn-del')
+buttonsAction('.btn-equal')
+
+
+function buttonNumberKey(numberInput1, numberInput2) {
+   document.querySelector(numberInput1, numberInput2)
 }
 
-function addOperation(x, y)      {return x + y}
-function subtractOperation(x, y) {return x - y}
-function multiplyOperation(x, y) {return x * y}
-function divideOperation(x, y)   {return x / y}
+buttonNumberKey('.first-num')
+buttonNumberKey('.second-num')
 
-if (operation === '+') {console.log(addOperation(Number(firstNumberEntered)), (Number(secondNumberEntered)))}
-if (operation === '-') {console.log(subtractOperation(Number(firstNumberEntered)), (Number(secondNumberEntered)))}
-if (operation === '*') {console.log(multiplyOperation(Number(firstNumberEntered)), (Number(secondNumberEntered)))}
-if (operation === '/') {console.log(divideOperation(Number(firstNumberEntered)), (Number(secondNumberEntered)))}
 
+function buttonOperation(elementLocation) {
+   document.querySelector(elementLocation)
+
+   function addOperation(x, y)      {return x + y}
+   function subtractOperation(x, y) {return x - y}
+   function multiplyOperation(x, y) {return x * y}
+   function divideOperation(x, y)   {return x / y}
+   
+   if (operation === '+') {console.log(addOperation(Number(firstNumberEntered)), (Number(secondNumberEntered)))}
+   if (operation === '-') {console.log(subtractOperation(Number(firstNumberEntered)), (Number(secondNumberEntered)))}
+   if (operation === '*') {console.log(multiplyOperation(Number(firstNumberEntered)), (Number(secondNumberEntered)))}
+   if (operation === '/') {console.log(divideOperation(Number(firstNumberEntered)), (Number(secondNumberEntered)))}
+}
+
+buttonOperations('.btn-operation')
 
 
 /* Things to figure out:
