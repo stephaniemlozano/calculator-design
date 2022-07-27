@@ -10,17 +10,10 @@ function buttonsAction(elementLocation) {
    document.querySelector(elementLocation)
 }
 
-buttonsAction('.btn-ac')
-buttonsAction('.btn-del')
-buttonsAction('.btn-equal')
-
 
 function buttonNumberKey(numberInput1, numberInput2) {
    document.querySelector(numberInput1, numberInput2)
 }
-
-buttonNumberKey('.first-num')
-buttonNumberKey('.second-num')
 
 
 function buttonOperation(elementLocation) {
@@ -37,6 +30,12 @@ function buttonOperation(elementLocation) {
    if (operation === '/') {console.log(divideOperation(Number(firstNumberEntered)), (Number(secondNumberEntered)))}
 }
 
+
+buttonsAction('.btn-ac')
+buttonsAction('.btn-del')
+buttonsAction('.btn-equal')
+buttonNumberKey('.first-num')
+buttonNumberKey('.second-num')
 buttonOperations('.btn-operation')
 
 
