@@ -1,0 +1,63 @@
+<div class="display">0</div>
+
+<button value="1" onClick="renderHTML('1')">1</button>
+<button value="2" onClick="renderHTML('2')">2</button>
+<button value="+" onClick="addition('+')">+</button>
+<button value="=" onClick="equal('=')">=</button>
+
+
+
+<script>
+const renderHTML = param1 => { 
+    /* <= "0" to catch zero and math operators (which are below zero) */
+    if (document.querySelector('.display').innerHTML <= "0")
+        document.querySelector('.display').innerHTML = param1    
+    else
+        document.querySelector('.display').innerHTML += param1
+    }
+
+let calculationArray = []
+
+
+const renderDisplay = (param1) => {
+    /* when the user first comes to its zero or the number is zero */
+    if (document.querySelector('.display').innerHTML <= "0")
+        document.querySelector('.display').innerHTML = param1    
+    else
+        document.querySelector('.display').innerHTML += param1
+        
+    if(document.querySelector('.display').innerHTML == '+') {
+        document.querySelector('.display').innerHTML = ''
+        document.querySelector('.display').innerHTML += param1
+    } 
+
+    if (document.querySelector('.display').innerHTML == '-'){
+        document.querySelector('.display').innerHTML = ''
+        document.querySelector('.display').innerHTML += param1
+    }
+        
+    }
+renderDisplay()
+
+
+
+const addition = () => {
+    let param1 = document.querySelector('.display').innerHTML
+    let operator = '+'
+    document.querySelector('.display').innerHTML = '+'
+    
+}
+
+const equal = () => {
+    let param1 = document.querySelector('.display').innerHTML
+    let operator = '+' || '-' || '*' || '/'
+    document.querySelector('.display').innerHTML = '='
+
+    if (operator == '+') {
+        return param1 + inputNumbersArray
+    }
+}
+
+
+
+
